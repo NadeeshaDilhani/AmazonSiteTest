@@ -31,26 +31,18 @@ public class AmazonSiteTest {
 
         driver.findElement(By.xpath("//*[@id=\"p_n_feature_nine_browse-bin/3291437011\"]/span/a/span")).click();
 
+        List<WebElement> elementList = driver.findElements(By.className("rush-component"));
+        if (elementList.size() >= 2) {
+
+            WebElement secondProduct = elementList.get(1);
+            secondProduct.click();
+        }
 
 
-        //List<WebElement> li = driver.findElements(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/div/div[1]/div/div[2]"));
 
+        
+        
 
-        //List<WebElement> li = driver.findElements(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[1]/div[1]/div[1]/div/span/div/div/span"));
-        //if (li.size() >= 2) {
-
-            //WebElement secondProduct = li.get(1);
-            //WebElement productNameElement = secondProduct.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/div/div[1]/div/div[2]"));
-            //secondProduct.click();
-
-
-       // List<WebElement> productElements = driver.findElements(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[1]/div[1]/div[1]/div/span/div/div/span"));
-
-
-           // if (productElements.size() >= 2) {
-                //WebElement secondProduct = productElements.get(1);
-                //.click();
-            //}
 
 
     }
